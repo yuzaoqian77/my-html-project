@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>今天吃什么</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 36px; /* 增大字号 */
+            font-weight: bold;
+        }
+        button {
+            padding: 20px 40px; /* 增大按钮尺寸 */
+            font-size: 24px; /* 增大按钮文字 */
+            cursor: pointer;
+            border-radius: 10px; /* 增加按钮圆角 */
+        }
+    </style>
+</head>
+<body>
+    <button onclick="generateRandom()">今天吃什么</button>
+    <div id="output">点一哈看看</div>
+
+    <script>
+        function generateRandom() {
+            // 定义变量数组
+            const options = ["茶香鸡米饭", "济宁糁汤", "燃岛屋", "鸡丝酸辣粉", "铁板炒饭", "腊肠肉拌饭", "蜜汁鸡腿饭", "龙须面", "自选泡馍", "0090汉堡", 
+			"小街胡同牛杂面", "羊杂面", "东北麻辣拌", "老济南朝鲜面", "肉夹馍"];
+            // 随机选择一个变量
+            const randomChoice = options[Math.floor(Math.random() * options.length)];
+            // 显示随机生成的变量
+            document.getElementById('output').innerText = "今天吃：" + randomChoice;
+        }
+    </script>
+</body>
+</html>
